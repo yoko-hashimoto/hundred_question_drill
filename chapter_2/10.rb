@@ -1,3 +1,5 @@
+#  10. 行数のカウント
+
 # n_lines = File.open("hightemp.txt").read.count("\n")
 # p n_lines
 
