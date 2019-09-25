@@ -48,3 +48,24 @@ def test04_01
 end
 
 test04_01
+
+def test04_02
+  result = { }
+  str = "Hi He Lied Because Boron Could Not Oxidize Fluorine. New Nations Might Also Sign Peace Security Clause. Arthur King Can."
+  words = str.gsub(/[^\w\s]/, "").split(" ")
+  # p words
+  one_letter_indexes = [1, 5, 6, 7, 8, 9, 15, 16, 19]
+  words.each.with_index(1) do |word, index|
+    if one_letter_indexes.include?(index)
+      # p word.slice(0)
+      # p index
+      key = word.slice(0)
+    else key = word.slice(0..1)
+      # p index
+    end
+    result[key] = index
+  end
+  p result
+end
+
+test04_02
