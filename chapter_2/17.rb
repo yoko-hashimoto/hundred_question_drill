@@ -4,4 +4,4 @@ first_col = []
 File.foreach("hightemp.txt") do |line|
   first_col << line.split("\t").first
 end
-puts first_col.sort.uniq
+puts first_col.uniq.sort
